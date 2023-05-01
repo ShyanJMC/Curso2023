@@ -1,0 +1,11 @@
+use std::vec::Vec;
+use std::process;
+
+fn main(){
+	println!("Primer ejercicio Calculadora");
+	let nut entrada: 164;
+	
+	loop{
+		
+	}
+}
