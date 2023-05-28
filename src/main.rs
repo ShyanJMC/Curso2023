@@ -12,6 +12,9 @@ use std::io::{self, Write};
 //use std::io::Write;
 //use std::io;
 
+mod implementaciones;
+use implementaciones::Implementacion1;
+
 fn main(){
 	println!("Primer ejercicio de una calculadora");
 	let mut entrada: i64;
@@ -74,6 +77,10 @@ fn main(){
 			println!("Mult detectada");
 		} else if input2.contains('/') {
 			println!("Div detectada");
+		} else if input2.contains("conver") {
+			let buffer1: Vec<&str> = input2.split(' ').collect();
+			let valor = buffer1[1].to_string().conversion();
+			println!("El string {} convertido en valor numérico es; {}", buffer1[1], valor);
 		} else {
 			// Muestra lo que pasamos como argumento hacia el stderr
 			eprintln!("Operación no detectada");
